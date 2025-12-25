@@ -20,7 +20,11 @@ Supports user registration and authentication along with CRUD operations for boo
 - dotenv – environment variable management
 
 ## Usage Locally
-- git clone https://github.com/your-username/LibraryAPI.git
-- cd LibraryAPI
-- npm install
-- npm run dev
+
+git clone https://github.com/your-username/LibraryAPI.git
+
+cd LibraryAPI
+
+npm install
+
+npm run dev

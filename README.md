@@ -8,7 +8,7 @@ Supports user registration and authentication along with CRUD operations for boo
 - Authenticated access to protected routes
 - Create and delete book records
 - RESTful API design
-- Persistent data storage## Technologies
+- Persistent data storage
 
 ## Technologies
 - Node.js – runtime environment

@@ -29,6 +29,7 @@ cd LibraryAPI
 npm install
 npm run dev
 ```
+
 ### Environment variables
 Create a .env file in the root directory:
 ```bash
@@ -36,10 +37,12 @@ MONGO_URI=your_mongodb_uri
 JWT_KEY=your_jwt_secret
 PORT=3000
 ```
+
 ### Register & Login
 - Register a user via POST /api/auth/register
 - Login via POST /api/auth/login
 - Login returns a JWT token
+
   
 ### Access protected routes
 Include the token in request headers:

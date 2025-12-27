@@ -1,4 +1,5 @@
 import { User } from "../models/user.model.js";
+import jwt from "jsonwebtoken";
 
 const registerUser = async (req, res) => {
 	try {
@@ -54,13 +55,23 @@ const loginUser = async (req, res) => {
 			message: "Invalid credentials"
 		});
 
+		const token = jwt.sign({
+			email: email,
+			userId: user._id
+		}, 
+		process.env.JWT_KEY, 
+		{
+			expiresIn: "1h"
+		});
+		
 		res.status(200).json({
 			message: "User Logged In",
 			user: {
 				id: user._id,
 				email: user.email,
 				username: user.username
-			}
+			},
+			token: token
 		});
 
 	} catch (error) {
